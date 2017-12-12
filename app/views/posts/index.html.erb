@@ -1,0 +1,13 @@
+<% @posts.each do |x| %>
+<div class="imagenes">
+	<%= image_tag x.image.url(:thumb) %>
+	<br>
+	<%= x.description %>
+	<br>
+	<div class="link">
+	<%= link_to "Destroy", x , method: :delete,data: { confirm: 'Are you sure?' }  %>
+	<%= link_to "Edit", x , method: :update %>
+	<%= link_to "Show", x %>
+	</div>
+</div>
+<% end %>
